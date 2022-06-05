@@ -7,23 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F5BF262282A9EE8004E0348 /* ReactiveMapKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5BF25F282A9EE8004E0348 /* ReactiveMapKit.xcframework */; };
+		1F5BF263282A9EE8004E0348 /* ReactiveMapKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5BF25F282A9EE8004E0348 /* ReactiveMapKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1F5BF264282A9EE8004E0348 /* ReactiveSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5BF260282A9EE8004E0348 /* ReactiveSwift.xcframework */; };
+		1F5BF265282A9EE8004E0348 /* ReactiveSwift.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5BF260282A9EE8004E0348 /* ReactiveSwift.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1F5BF266282A9EE8004E0348 /* ReactiveCocoa.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5BF261282A9EE8004E0348 /* ReactiveCocoa.xcframework */; };
+		1F5BF267282A9EE8004E0348 /* ReactiveCocoa.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5BF261282A9EE8004E0348 /* ReactiveCocoa.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1F5BF26B282A9FBD004E0348 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 1F5BF26A282A9FBD004E0348 /* Moya */; };
+		1F5BF26D282A9FBD004E0348 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1F5BF26C282A9FBD004E0348 /* ReactiveMoya */; };
+		1F5BF26F282AA17C004E0348 /* CommonInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BF26E282AA17C004E0348 /* CommonInfoViewModel.swift */; };
+		1F5BF271282AA191004E0348 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BF270282AA191004E0348 /* NetworkManager.swift */; };
+		1F5BF27F282AA518004E0348 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BF27E282AA518004E0348 /* NetworkService.swift */; };
+		1F908628282FD1F800CD32F5 /* CommonInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F908627282FD1F800CD32F5 /* CommonInfoResponse.swift */; };
 		1FD3C22B282A7F3A00076FC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD3C22A282A7F3A00076FC8 /* AppDelegate.swift */; };
 		1FD3C22D282A7F3A00076FC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD3C22C282A7F3A00076FC8 /* SceneDelegate.swift */; };
-		1FD3C22F282A7F3A00076FC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD3C22E282A7F3A00076FC8 /* ViewController.swift */; };
+		1FD3C22F282A7F3A00076FC8 /* CommonInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD3C22E282A7F3A00076FC8 /* CommonInfoViewController.swift */; };
 		1FD3C232282A7F3A00076FC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FD3C230282A7F3A00076FC8 /* Main.storyboard */; };
 		1FD3C234282A7F3C00076FC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FD3C233282A7F3C00076FC8 /* Assets.xcassets */; };
 		1FD3C237282A7F3C00076FC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FD3C235282A7F3C00076FC8 /* LaunchScreen.storyboard */; };
+		1FE24D19284C9B6A00AA01E0 /* WorkerInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE24D18284C9B6A00AA01E0 /* WorkerInfoResponse.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1F5BF268282A9EE8004E0348 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1F5BF265282A9EE8004E0348 /* ReactiveSwift.xcframework in Embed Frameworks */,
+				1F5BF267282A9EE8004E0348 /* ReactiveCocoa.xcframework in Embed Frameworks */,
+				1F5BF263282A9EE8004E0348 /* ReactiveMapKit.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1F5BF25F282A9EE8004E0348 /* ReactiveMapKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ReactiveMapKit.xcframework; path = Carthage/Build/ReactiveMapKit.xcframework; sourceTree = "<group>"; };
+		1F5BF260282A9EE8004E0348 /* ReactiveSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ReactiveSwift.xcframework; path = Carthage/Build/ReactiveSwift.xcframework; sourceTree = "<group>"; };
+		1F5BF261282A9EE8004E0348 /* ReactiveCocoa.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ReactiveCocoa.xcframework; path = Carthage/Build/ReactiveCocoa.xcframework; sourceTree = "<group>"; };
+		1F5BF26E282AA17C004E0348 /* CommonInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonInfoViewModel.swift; sourceTree = "<group>"; };
+		1F5BF270282AA191004E0348 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		1F5BF27E282AA518004E0348 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		1F908627282FD1F800CD32F5 /* CommonInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonInfoResponse.swift; sourceTree = "<group>"; };
 		1FD3C227282A7F3A00076FC8 /* EMCDtestApiAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMCDtestApiAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FD3C22A282A7F3A00076FC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FD3C22C282A7F3A00076FC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1FD3C22E282A7F3A00076FC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1FD3C22E282A7F3A00076FC8 /* CommonInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonInfoViewController.swift; sourceTree = "<group>"; };
 		1FD3C231282A7F3A00076FC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1FD3C233282A7F3C00076FC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FD3C236282A7F3C00076FC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FD3C238282A7F3C00076FC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FE24D18284C9B6A00AA01E0 /* WorkerInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerInfoResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +68,43 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F5BF264282A9EE8004E0348 /* ReactiveSwift.xcframework in Frameworks */,
+				1F5BF266282A9EE8004E0348 /* ReactiveCocoa.xcframework in Frameworks */,
+				1F5BF26B282A9FBD004E0348 /* Moya in Frameworks */,
+				1F5BF26D282A9FBD004E0348 /* ReactiveMoya in Frameworks */,
+				1F5BF262282A9EE8004E0348 /* ReactiveMapKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F5BF25E282A9EE8004E0348 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F5BF261282A9EE8004E0348 /* ReactiveCocoa.xcframework */,
+				1F5BF25F282A9EE8004E0348 /* ReactiveMapKit.xcframework */,
+				1F5BF260282A9EE8004E0348 /* ReactiveSwift.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1F5BF27D282AA4FE004E0348 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1FE24D17284B38D100AA01E0 /* Data */,
+				1F5BF270282AA191004E0348 /* NetworkManager.swift */,
+				1F5BF27E282AA518004E0348 /* NetworkService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		1FD3C21E282A7F3A00076FC8 = {
 			isa = PBXGroup;
 			children = (
 				1FD3C229282A7F3A00076FC8 /* EMCDtestApiAPP */,
 				1FD3C228282A7F3A00076FC8 /* Products */,
+				1F5BF25E282A9EE8004E0348 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +119,34 @@
 		1FD3C229282A7F3A00076FC8 /* EMCDtestApiAPP */ = {
 			isa = PBXGroup;
 			children = (
+				1FE24D16284B383E00AA01E0 /* CommonInfoScreen */,
 				1FD3C22A282A7F3A00076FC8 /* AppDelegate.swift */,
-				1FD3C22C282A7F3A00076FC8 /* SceneDelegate.swift */,
-				1FD3C22E282A7F3A00076FC8 /* ViewController.swift */,
 				1FD3C230282A7F3A00076FC8 /* Main.storyboard */,
+				1FD3C22C282A7F3A00076FC8 /* SceneDelegate.swift */,
+				1F5BF27D282AA4FE004E0348 /* Networking */,
 				1FD3C233282A7F3C00076FC8 /* Assets.xcassets */,
 				1FD3C235282A7F3C00076FC8 /* LaunchScreen.storyboard */,
 				1FD3C238282A7F3C00076FC8 /* Info.plist */,
 			);
 			path = EMCDtestApiAPP;
+			sourceTree = "<group>";
+		};
+		1FE24D16284B383E00AA01E0 /* CommonInfoScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1F5BF26E282AA17C004E0348 /* CommonInfoViewModel.swift */,
+				1FD3C22E282A7F3A00076FC8 /* CommonInfoViewController.swift */,
+			);
+			path = CommonInfoScreen;
+			sourceTree = "<group>";
+		};
+		1FE24D17284B38D100AA01E0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1F908627282FD1F800CD32F5 /* CommonInfoResponse.swift */,
+				1FE24D18284C9B6A00AA01E0 /* WorkerInfoResponse.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,12 +159,17 @@
 				1FD3C223282A7F3A00076FC8 /* Sources */,
 				1FD3C224282A7F3A00076FC8 /* Frameworks */,
 				1FD3C225282A7F3A00076FC8 /* Resources */,
+				1F5BF268282A9EE8004E0348 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = EMCDtestApiAPP;
+			packageProductDependencies = (
+				1F5BF26A282A9FBD004E0348 /* Moya */,
+				1F5BF26C282A9FBD004E0348 /* ReactiveMoya */,
+			);
 			productName = EMCDtestApiAPP;
 			productReference = 1FD3C227282A7F3A00076FC8 /* EMCDtestApiAPP.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +198,9 @@
 				Base,
 			);
 			mainGroup = 1FD3C21E282A7F3A00076FC8;
+			packageReferences = (
+				1F5BF269282A9FBD004E0348 /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = 1FD3C228282A7F3A00076FC8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +228,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FD3C22F282A7F3A00076FC8 /* ViewController.swift in Sources */,
+				1FE24D19284C9B6A00AA01E0 /* WorkerInfoResponse.swift in Sources */,
+				1F908628282FD1F800CD32F5 /* CommonInfoResponse.swift in Sources */,
+				1FD3C22F282A7F3A00076FC8 /* CommonInfoViewController.swift in Sources */,
 				1FD3C22B282A7F3A00076FC8 /* AppDelegate.swift in Sources */,
+				1F5BF271282AA191004E0348 /* NetworkManager.swift in Sources */,
+				1F5BF26F282AA17C004E0348 /* CommonInfoViewModel.swift in Sources */,
+				1F5BF27F282AA518004E0348 /* NetworkService.swift in Sources */,
 				1FD3C22D282A7F3A00076FC8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +397,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = v.sklyarov.EMCDtestApiAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -330,6 +426,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = v.sklyarov.EMCDtestApiAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -360,6 +457,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1F5BF269282A9FBD004E0348 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = exactVersion;
+				version = 15.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1F5BF26A282A9FBD004E0348 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F5BF269282A9FBD004E0348 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		1F5BF26C282A9FBD004E0348 /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F5BF269282A9FBD004E0348 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1FD3C21F282A7F3A00076FC8 /* Project object */;
 }
