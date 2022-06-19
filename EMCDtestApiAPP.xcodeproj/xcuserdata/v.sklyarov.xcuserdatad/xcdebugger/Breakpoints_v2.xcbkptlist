@@ -7,32 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0F740B98-5BA6-4CFB-AFCB-19B84A05FE84"
+            uuid = "E8277A88-5C4A-407F-879B-C70BAD816F53"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EMCDtestApiAPP/CommonInfoScreen/CommonInfoViewModel.swift"
+            filePath = "EMCDtestApiAPP/WorkersInfoScreen/WorkersInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "fetch()"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "coinPickerTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A3DA84DB-1FC2-4871-AF6B-3D8276E17638"
+            uuid = "33DA8BAC-74C2-42AE-9609-302E99260379"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EMCDtestApiAPP/CommonInfoScreen/CommonInfoViewModel.swift"
+            filePath = "EMCDtestApiAPP/WorkersInfoScreen/CoinPickerViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "fetch()"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

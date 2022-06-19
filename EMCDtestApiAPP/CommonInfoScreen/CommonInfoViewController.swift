@@ -44,9 +44,7 @@ class CommonInfoViewController: UIViewController {
         dogeTotalPaidLabel.reactive.text <~ viewModel.dogeTotalPaid
         
         viewModel.fetchAction.apply().start()
-        
-        viewModel.fetch()
-        
+                
         let scrollView = UIScrollView(frame: CGRect(x: 10, y: 10, width: view.frame.size.width - 20, height: view.frame.size.height - 220))
         view.addSubview(scrollView)
        

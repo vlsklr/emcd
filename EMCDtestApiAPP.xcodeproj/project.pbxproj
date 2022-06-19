@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F12FA0C285EEA4A006074A4 /* WorkersInfoScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F12FA0B285EEA4A006074A4 /* WorkersInfoScreen.storyboard */; };
+		1F12FA0E285EED7C006074A4 /* CommonInfoScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F12FA0D285EED7C006074A4 /* CommonInfoScreen.storyboard */; };
+		1F12FA10285EF899006074A4 /* WorkersInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F12FA0F285EF899006074A4 /* WorkersInfoViewController.swift */; };
+		1F12FA12285EF8BA006074A4 /* WorkersInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F12FA11285EF8BA006074A4 /* WorkersInfoViewModel.swift */; };
+		1F12FA14285F111B006074A4 /* CoinPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F12FA13285F111B006074A4 /* CoinPickerViewController.swift */; };
 		1F5BF262282A9EE8004E0348 /* ReactiveMapKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5BF25F282A9EE8004E0348 /* ReactiveMapKit.xcframework */; };
 		1F5BF263282A9EE8004E0348 /* ReactiveMapKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5BF25F282A9EE8004E0348 /* ReactiveMapKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1F5BF264282A9EE8004E0348 /* ReactiveSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5BF260282A9EE8004E0348 /* ReactiveSwift.xcframework */; };
@@ -45,6 +50,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1F12FA0B285EEA4A006074A4 /* WorkersInfoScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkersInfoScreen.storyboard; sourceTree = "<group>"; };
+		1F12FA0D285EED7C006074A4 /* CommonInfoScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CommonInfoScreen.storyboard; sourceTree = "<group>"; };
+		1F12FA0F285EF899006074A4 /* WorkersInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkersInfoViewController.swift; sourceTree = "<group>"; };
+		1F12FA11285EF8BA006074A4 /* WorkersInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkersInfoViewModel.swift; sourceTree = "<group>"; };
+		1F12FA13285F111B006074A4 /* CoinPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinPickerViewController.swift; sourceTree = "<group>"; };
 		1F5BF25F282A9EE8004E0348 /* ReactiveMapKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ReactiveMapKit.xcframework; path = Carthage/Build/ReactiveMapKit.xcframework; sourceTree = "<group>"; };
 		1F5BF260282A9EE8004E0348 /* ReactiveSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ReactiveSwift.xcframework; path = Carthage/Build/ReactiveSwift.xcframework; sourceTree = "<group>"; };
 		1F5BF261282A9EE8004E0348 /* ReactiveCocoa.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ReactiveCocoa.xcframework; path = Carthage/Build/ReactiveCocoa.xcframework; sourceTree = "<group>"; };
@@ -79,6 +89,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F12FA0A285EEA31006074A4 /* WorkersInfoScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1F12FA0B285EEA4A006074A4 /* WorkersInfoScreen.storyboard */,
+				1F12FA0F285EF899006074A4 /* WorkersInfoViewController.swift */,
+				1F12FA11285EF8BA006074A4 /* WorkersInfoViewModel.swift */,
+				1F12FA13285F111B006074A4 /* CoinPickerViewController.swift */,
+			);
+			path = WorkersInfoScreen;
+			sourceTree = "<group>";
+		};
 		1F5BF25E282A9EE8004E0348 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +140,7 @@
 		1FD3C229282A7F3A00076FC8 /* EMCDtestApiAPP */ = {
 			isa = PBXGroup;
 			children = (
+				1F12FA0A285EEA31006074A4 /* WorkersInfoScreen */,
 				1FE24D16284B383E00AA01E0 /* CommonInfoScreen */,
 				1FD3C22A282A7F3A00076FC8 /* AppDelegate.swift */,
 				1FD3C230282A7F3A00076FC8 /* Main.storyboard */,
@@ -136,6 +158,7 @@
 			children = (
 				1F5BF26E282AA17C004E0348 /* CommonInfoViewModel.swift */,
 				1FD3C22E282A7F3A00076FC8 /* CommonInfoViewController.swift */,
+				1F12FA0D285EED7C006074A4 /* CommonInfoScreen.storyboard */,
 			);
 			path = CommonInfoScreen;
 			sourceTree = "<group>";
@@ -215,9 +238,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F12FA0C285EEA4A006074A4 /* WorkersInfoScreen.storyboard in Resources */,
 				1FD3C237282A7F3C00076FC8 /* LaunchScreen.storyboard in Resources */,
 				1FD3C234282A7F3C00076FC8 /* Assets.xcassets in Resources */,
 				1FD3C232282A7F3A00076FC8 /* Main.storyboard in Resources */,
+				1F12FA0E285EED7C006074A4 /* CommonInfoScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +254,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FE24D19284C9B6A00AA01E0 /* WorkerInfoResponse.swift in Sources */,
+				1F12FA14285F111B006074A4 /* CoinPickerViewController.swift in Sources */,
+				1F12FA10285EF899006074A4 /* WorkersInfoViewController.swift in Sources */,
+				1F12FA12285EF8BA006074A4 /* WorkersInfoViewModel.swift in Sources */,
 				1F908628282FD1F800CD32F5 /* CommonInfoResponse.swift in Sources */,
 				1FD3C22F282A7F3A00076FC8 /* CommonInfoViewController.swift in Sources */,
 				1FD3C22B282A7F3A00076FC8 /* AppDelegate.swift in Sources */,

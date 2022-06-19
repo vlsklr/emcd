@@ -32,19 +32,7 @@ class CommonInfoViewModel {
     }()
     
     private let service = NetworkService()
-    
-    func fetch() {
-
-        service.getCoinInfo(coinName: "doge").startWithResult { [weak self] result in
-            switch result {
-            case .failure(let error):
-                print(error)
-            case .success(let response):
-                print(response)
-            }
-        }
-    }
-    
+        
     func fetchData() -> SignalProducer<Void, Error> {
         return .init { [weak self] observer, lifetime in
             guard let self = self else {
@@ -57,8 +45,6 @@ class CommonInfoViewModel {
                     return error as Error
                 }
                 .map { response -> Void in
-//                    let response = result
-//                    print(response)
                     guard let commonInfo = try? JSONDecoder().decode(CommonInfoResponse.self, from: response.data) else { return }
                     self.userNameProperty.value = commonInfo.userName
                     
