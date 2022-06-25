@@ -13,11 +13,7 @@ class CoinPickerViewController: UITableViewController {
     let coins = [ "BTC",
                   "DOGE",
                   "LTC" ]
-    
-    var pickedCoin = MutableProperty("BTC")
-    
-    //temp title update with callback
-    var updateVal: ((String,UIControl.State) -> Void)?
+    var viewModel: WorkersInfoViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,17 +42,9 @@ class CoinPickerViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        pickedCoin.value = coins[indexPath.row]
-//        pickedCoin.swap(coins[indexPath.row])
-//        pickedCoin.value = coins[indexPath.row]
-        pickedCoin = MutableProperty(coins[indexPath.row])
-        
-        //temp title update with callback
-        updateVal?(coins[indexPath.row], .normal)
-        
+        viewModel?.pickedCoin.value = coins[indexPath.row]
+        viewModel?.fetchWorkersAction.apply().start()
         dismiss(animated: true)
-          
-        
     }
 
 }

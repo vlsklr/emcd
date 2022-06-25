@@ -17,7 +17,7 @@ class NetworkService {
         return provider.reactive.request(.getCommonInfo)
     }
     
-    func getCoinInfo(coinName: String) -> SignalProducer<Response, MoyaError> {
+    func getInfoAboutWorker(coinName: String) -> SignalProducer<Response, MoyaError> {
         return provider.reactive.request(.getInfoAboutWorker(coin: coinName))
     }
     
