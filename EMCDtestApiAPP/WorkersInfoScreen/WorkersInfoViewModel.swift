@@ -17,7 +17,13 @@ class WorkersInfoViewModel {
     var totalWorkers = MutableProperty("")
     var activeWorkers = MutableProperty("")
     var incativeWorkers = MutableProperty("")
+    var hashrate = MutableProperty("")
+    var hashrate1h = MutableProperty("")
+    var hashrate24h = MutableProperty("")
     var pickedCoin = MutableProperty("BTC")
+    var isEmptyTable = MutableProperty(true)
+    var workers: MutableProperty<[WorkerInfo]> = MutableProperty<[WorkerInfo]>([])
+
     
     
     lazy var fetchWorkersAction: Action<Void, Void, Error> = {
@@ -41,6 +47,11 @@ class WorkersInfoViewModel {
                     self.totalWorkers.value = coinInfo.totalCount.all.description
                     self.activeWorkers.value = coinInfo.totalCount.active.description
                     self.incativeWorkers.value = coinInfo.totalCount.inactive.description
+                    self.hashrate.value = coinInfo.totalHashrate.hashrate.description
+                    self.hashrate1h.value = coinInfo.totalHashrate.hashrate1h.description
+                    self.hashrate24h.value = coinInfo.totalHashrate.hashrate24h.description
+                    self.workers = MutableProperty<[WorkerInfo]>(coinInfo.details)
+                    self.isEmptyTable.value = self.workers.value.isEmpty
                     return()
                 }.start(observer)
         }

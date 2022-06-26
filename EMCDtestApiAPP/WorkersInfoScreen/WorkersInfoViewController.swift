@@ -41,13 +41,22 @@ class WorkersInfoViewController: UIViewController {
         super.viewDidLoad()
         viewModel.fetchWorkersAction.apply().start()
         workersTableView.dataSource = self
+        workersTableView.register(cellType: WorkerCell.self)
         
         coinPickerButton.reactive.title <~ viewModel.pickedCoin
         allWorkersLabel.reactive.text <~ viewModel.totalWorkers
         activeWorkersLabel.reactive.text <~ viewModel.activeWorkers
         inactiveWorkersLabel.reactive.text <~ viewModel.incativeWorkers
+        hashrateLabel.reactive.text <~ viewModel.hashrate
+        hashrate1hLabel.reactive.text <~ viewModel.hashrate1h
+        hashrate24hLabel.reactive.text <~ viewModel.hashrate24h
         
-
+        workersTableView.reactive.isHidden <~ viewModel.isEmptyTable
+        
+        viewModel.isEmptyTable.signal.observeValues { value in
+            print(value)
+            self.workersTableView.reloadData()
+        }
 
     }
     
@@ -70,11 +79,15 @@ extension WorkersInfoViewController: UIPopoverPresentationControllerDelegate {
 
 extension WorkersInfoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.workers.value.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = workersTableView.dequeueReusableCell(withIdentifier: "workerCell", for: indexPath)
+//        let cell = workersTableView.dequeueReusableCell(withIdentifier: "workerCell", for: indexPath)
+        let cell: WorkerCell = tableView.dequeueReusableCell(for: indexPath)
+//        cell.viewModel = viewModel.cellVM(at: indexPath)
+
         return cell
     }
 }
+

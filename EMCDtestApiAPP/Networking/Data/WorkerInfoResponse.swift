@@ -19,7 +19,6 @@ extension WorkerInfoResponse: Decodable {
         case totalCount = "total_count"
         case totalHashrate = "total_hashrate"
         case details
-        
     }
     
 }

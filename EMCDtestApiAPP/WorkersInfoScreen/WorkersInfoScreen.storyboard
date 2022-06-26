@@ -34,16 +34,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vle-0n-jtT">
                                 <rect key="frame" x="25" y="290" width="364" height="498"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="workerCell" id="zU6-Gv-TQs">
-                                        <rect key="frame" x="0.0" y="44.5" width="364" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zU6-Gv-TQs" id="0dM-Lv-bCf">
-                                            <rect key="frame" x="0.0" y="0.0" width="364" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="center" distribution="equalCentering" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oPj-tZ-GOj">
                                 <rect key="frame" x="25" y="137.5" width="364" height="20.5"/>

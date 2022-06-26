@@ -23,6 +23,9 @@
 		1F5BF26F282AA17C004E0348 /* CommonInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BF26E282AA17C004E0348 /* CommonInfoViewModel.swift */; };
 		1F5BF271282AA191004E0348 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BF270282AA191004E0348 /* NetworkManager.swift */; };
 		1F5BF27F282AA518004E0348 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5BF27E282AA518004E0348 /* NetworkService.swift */; };
+		1F8DBC01286844910013F8DE /* WorkerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F8DBC00286844910013F8DE /* WorkerCell.xib */; };
+		1F8DBC032868461D0013F8DE /* WorkerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8DBC022868461D0013F8DE /* WorkerCell.swift */; };
+		1F8DBC06286847DC0013F8DE /* Reusable in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8DBC05286847DC0013F8DE /* Reusable */; };
 		1F908628282FD1F800CD32F5 /* CommonInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F908627282FD1F800CD32F5 /* CommonInfoResponse.swift */; };
 		1FD3C22B282A7F3A00076FC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD3C22A282A7F3A00076FC8 /* AppDelegate.swift */; };
 		1FD3C22D282A7F3A00076FC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD3C22C282A7F3A00076FC8 /* SceneDelegate.swift */; };
@@ -61,6 +64,8 @@
 		1F5BF26E282AA17C004E0348 /* CommonInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonInfoViewModel.swift; sourceTree = "<group>"; };
 		1F5BF270282AA191004E0348 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		1F5BF27E282AA518004E0348 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		1F8DBC00286844910013F8DE /* WorkerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkerCell.xib; sourceTree = "<group>"; };
+		1F8DBC022868461D0013F8DE /* WorkerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerCell.swift; sourceTree = "<group>"; };
 		1F908627282FD1F800CD32F5 /* CommonInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonInfoResponse.swift; sourceTree = "<group>"; };
 		1FD3C227282A7F3A00076FC8 /* EMCDtestApiAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMCDtestApiAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FD3C22A282A7F3A00076FC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +88,7 @@
 				1F5BF26B282A9FBD004E0348 /* Moya in Frameworks */,
 				1F5BF26D282A9FBD004E0348 /* ReactiveMoya in Frameworks */,
 				1F5BF262282A9EE8004E0348 /* ReactiveMapKit.xcframework in Frameworks */,
+				1F8DBC06286847DC0013F8DE /* Reusable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +98,7 @@
 		1F12FA0A285EEA31006074A4 /* WorkersInfoScreen */ = {
 			isa = PBXGroup;
 			children = (
+				1F710F1428681BEE00DC0F19 /* WorkerCell */,
 				1F12FA0B285EEA4A006074A4 /* WorkersInfoScreen.storyboard */,
 				1F12FA0F285EF899006074A4 /* WorkersInfoViewController.swift */,
 				1F12FA11285EF8BA006074A4 /* WorkersInfoViewModel.swift */,
@@ -118,6 +125,15 @@
 				1F5BF27E282AA518004E0348 /* NetworkService.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		1F710F1428681BEE00DC0F19 /* WorkerCell */ = {
+			isa = PBXGroup;
+			children = (
+				1F8DBC00286844910013F8DE /* WorkerCell.xib */,
+				1F8DBC022868461D0013F8DE /* WorkerCell.swift */,
+			);
+			path = WorkerCell;
 			sourceTree = "<group>";
 		};
 		1FD3C21E282A7F3A00076FC8 = {
@@ -192,6 +208,7 @@
 			packageProductDependencies = (
 				1F5BF26A282A9FBD004E0348 /* Moya */,
 				1F5BF26C282A9FBD004E0348 /* ReactiveMoya */,
+				1F8DBC05286847DC0013F8DE /* Reusable */,
 			);
 			productName = EMCDtestApiAPP;
 			productReference = 1FD3C227282A7F3A00076FC8 /* EMCDtestApiAPP.app */;
@@ -223,6 +240,7 @@
 			mainGroup = 1FD3C21E282A7F3A00076FC8;
 			packageReferences = (
 				1F5BF269282A9FBD004E0348 /* XCRemoteSwiftPackageReference "Moya" */,
+				1F8DBC04286847DB0013F8DE /* XCRemoteSwiftPackageReference "Reusable" */,
 			);
 			productRefGroup = 1FD3C228282A7F3A00076FC8 /* Products */;
 			projectDirPath = "";
@@ -241,6 +259,7 @@
 				1F12FA0C285EEA4A006074A4 /* WorkersInfoScreen.storyboard in Resources */,
 				1FD3C237282A7F3C00076FC8 /* LaunchScreen.storyboard in Resources */,
 				1FD3C234282A7F3C00076FC8 /* Assets.xcassets in Resources */,
+				1F8DBC01286844910013F8DE /* WorkerCell.xib in Resources */,
 				1FD3C232282A7F3A00076FC8 /* Main.storyboard in Resources */,
 				1F12FA0E285EED7C006074A4 /* CommonInfoScreen.storyboard in Resources */,
 			);
@@ -255,6 +274,7 @@
 			files = (
 				1FE24D19284C9B6A00AA01E0 /* WorkerInfoResponse.swift in Sources */,
 				1F12FA14285F111B006074A4 /* CoinPickerViewController.swift in Sources */,
+				1F8DBC032868461D0013F8DE /* WorkerCell.swift in Sources */,
 				1F12FA10285EF899006074A4 /* WorkersInfoViewController.swift in Sources */,
 				1F12FA12285EF8BA006074A4 /* WorkersInfoViewModel.swift in Sources */,
 				1F908628282FD1F800CD32F5 /* CommonInfoResponse.swift in Sources */,
@@ -495,6 +515,14 @@
 				version = 15.0.0;
 			};
 		};
+		1F8DBC04286847DB0013F8DE /* XCRemoteSwiftPackageReference "Reusable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AliSoftware/Reusable.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -507,6 +535,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1F5BF269282A9FBD004E0348 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = ReactiveMoya;
+		};
+		1F8DBC05286847DC0013F8DE /* Reusable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F8DBC04286847DB0013F8DE /* XCRemoteSwiftPackageReference "Reusable" */;
+			productName = Reusable;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
