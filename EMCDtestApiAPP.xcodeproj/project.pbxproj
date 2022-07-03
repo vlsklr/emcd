@@ -12,6 +12,7 @@
 		1F12FA10285EF899006074A4 /* WorkersInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F12FA0F285EF899006074A4 /* WorkersInfoViewController.swift */; };
 		1F12FA12285EF8BA006074A4 /* WorkersInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F12FA11285EF8BA006074A4 /* WorkersInfoViewModel.swift */; };
 		1F12FA14285F111B006074A4 /* CoinPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F12FA13285F111B006074A4 /* CoinPickerViewController.swift */; };
+		1F36461528716B0C001D3165 /* WorkerCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F36461428716B0C001D3165 /* WorkerCellViewModel.swift */; };
 		1F5BF262282A9EE8004E0348 /* ReactiveMapKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5BF25F282A9EE8004E0348 /* ReactiveMapKit.xcframework */; };
 		1F5BF263282A9EE8004E0348 /* ReactiveMapKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5BF25F282A9EE8004E0348 /* ReactiveMapKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1F5BF264282A9EE8004E0348 /* ReactiveSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5BF260282A9EE8004E0348 /* ReactiveSwift.xcframework */; };
@@ -58,6 +59,7 @@
 		1F12FA0F285EF899006074A4 /* WorkersInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkersInfoViewController.swift; sourceTree = "<group>"; };
 		1F12FA11285EF8BA006074A4 /* WorkersInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkersInfoViewModel.swift; sourceTree = "<group>"; };
 		1F12FA13285F111B006074A4 /* CoinPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinPickerViewController.swift; sourceTree = "<group>"; };
+		1F36461428716B0C001D3165 /* WorkerCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerCellViewModel.swift; sourceTree = "<group>"; };
 		1F5BF25F282A9EE8004E0348 /* ReactiveMapKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ReactiveMapKit.xcframework; path = Carthage/Build/ReactiveMapKit.xcframework; sourceTree = "<group>"; };
 		1F5BF260282A9EE8004E0348 /* ReactiveSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ReactiveSwift.xcframework; path = Carthage/Build/ReactiveSwift.xcframework; sourceTree = "<group>"; };
 		1F5BF261282A9EE8004E0348 /* ReactiveCocoa.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ReactiveCocoa.xcframework; path = Carthage/Build/ReactiveCocoa.xcframework; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			children = (
 				1F8DBC00286844910013F8DE /* WorkerCell.xib */,
 				1F8DBC022868461D0013F8DE /* WorkerCell.swift */,
+				1F36461428716B0C001D3165 /* WorkerCellViewModel.swift */,
 			);
 			path = WorkerCell;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				1FE24D19284C9B6A00AA01E0 /* WorkerInfoResponse.swift in Sources */,
 				1F12FA14285F111B006074A4 /* CoinPickerViewController.swift in Sources */,
 				1F8DBC032868461D0013F8DE /* WorkerCell.swift in Sources */,
+				1F36461528716B0C001D3165 /* WorkerCellViewModel.swift in Sources */,
 				1F12FA10285EF899006074A4 /* WorkersInfoViewController.swift in Sources */,
 				1F12FA12285EF8BA006074A4 /* WorkersInfoViewModel.swift in Sources */,
 				1F908628282FD1F800CD32F5 /* CommonInfoResponse.swift in Sources */,

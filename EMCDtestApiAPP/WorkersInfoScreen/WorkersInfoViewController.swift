@@ -12,6 +12,8 @@ import ReactiveSwift
 
 class WorkersInfoViewController: UIViewController {
     
+    // MARK: - IBOutlets
+    
     @IBOutlet var coinPickerButton: UIButton!
     @IBOutlet var workersTableView: UITableView!
     @IBOutlet var allWorkersLabel: UILabel!
@@ -21,6 +23,11 @@ class WorkersInfoViewController: UIViewController {
     @IBOutlet var hashrate1hLabel: UILabel!
     @IBOutlet var hashrate24hLabel: UILabel!
     
+    // MARK: - Properties
+    
+    private lazy var refreshControl: UIRefreshControl = {
+            return UIRefreshControl()
+        }()
     let viewModel = WorkersInfoViewModel()
     var coinPickerVC: CoinPickerViewController? {
         guard let coinPickerVC = storyboard?.instantiateViewController(withIdentifier: "coinPickerVC") as? CoinPickerViewController else { return nil }
@@ -37,6 +44,8 @@ class WorkersInfoViewController: UIViewController {
         return coinPickerVC
     }
     
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.fetchWorkersAction.apply().start()
@@ -52,13 +61,15 @@ class WorkersInfoViewController: UIViewController {
         hashrate24hLabel.reactive.text <~ viewModel.hashrate24h
         
         workersTableView.reactive.isHidden <~ viewModel.isEmptyTable
-        
+        refreshControl.reactive.refresh = .init(viewModel.fetchWorkersAction)
+        workersTableView.refreshControl = refreshControl
         viewModel.isEmptyTable.signal.observeValues { value in
-            print(value)
             self.workersTableView.reloadData()
         }
 
     }
+    
+    // MARK: - IBActions
     
     @IBAction func coinPickerTapped(_ sender: Any) {
         guard let coinPickerVC = coinPickerVC else {
@@ -69,6 +80,8 @@ class WorkersInfoViewController: UIViewController {
     
 }
 
+// MARK: - UIPopoverPresentationControllerDelegate. Needs for coinPicker
+
 extension WorkersInfoViewController: UIPopoverPresentationControllerDelegate {
     
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
@@ -77,16 +90,17 @@ extension WorkersInfoViewController: UIPopoverPresentationControllerDelegate {
     
 }
 
+// MARK: - UITableViewDataSource
+
 extension WorkersInfoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.workers.value.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = workersTableView.dequeueReusableCell(withIdentifier: "workerCell", for: indexPath)
         let cell: WorkerCell = tableView.dequeueReusableCell(for: indexPath)
-//        cell.viewModel = viewModel.cellVM(at: indexPath)
-
+        let workerInfo = viewModel.workers.value[indexPath.row]
+        cell.viewModel = WorkerCellViewModel(with: workerInfo)
         return cell
     }
 }
