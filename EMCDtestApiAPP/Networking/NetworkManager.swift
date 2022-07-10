@@ -11,6 +11,7 @@ import Moya
 enum NetworkManager {
     case getCommonInfo
     case getInfoAboutWorker(coin: String)
+    case getInfoAboutPayouts(coin: String)
 }
 
 extension NetworkManager: TargetType {
@@ -29,13 +30,16 @@ extension NetworkManager: TargetType {
             return "/info/\(key)"
         case .getInfoAboutWorker(let coin):
             return "/\(coin)/workers/\(key)"
+        case .getInfoAboutPayouts(coin: let coin):
+            return "/\(coin)/payouts/\(key)"
         }
     }
     
     var method: Moya.Method {
         switch self {
         case .getCommonInfo,
-             .getInfoAboutWorker:
+             .getInfoAboutWorker,
+             .getInfoAboutPayouts:
             return .get
         }
     }

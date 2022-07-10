@@ -26,7 +26,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <action selector="coinPickerTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1zZ-ji-Joh"/>
-                                    <segue destination="jYi-k9-c2P" kind="popoverPresentation" popoverAnchorView="tV9-LC-BFg" id="IAE-0h-zxH">
+                                    <segue destination="bCN-IW-6fH" kind="popoverPresentation" popoverAnchorView="tV9-LC-BFg" id="T0r-H2-rGf">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
@@ -198,34 +198,13 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="81.696428571428569"/>
         </scene>
-        <!--Coin Picker View Controller-->
-        <scene sceneID="xYO-1S-j4y">
+        <!--CoinPicker-->
+        <scene sceneID="Gvq-R3-5lO">
             <objects>
-                <tableViewController storyboardIdentifier="coinPickerVC" id="jYi-k9-c2P" customClass="CoinPickerViewController" customModule="EMCDtestApiAPP" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="P9j-2d-3yi">
-                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="coinCell" id="lGx-t6-oyp">
-                                <rect key="frame" x="0.0" y="44.5" width="250" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lGx-t6-oyp" id="NFd-t2-EJ7">
-                                    <rect key="frame" x="0.0" y="0.0" width="250" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="jYi-k9-c2P" id="U4P-4K-iXR"/>
-                            <outlet property="delegate" destination="jYi-k9-c2P" id="ZVJ-C3-CHY"/>
-                        </connections>
-                    </tableView>
-                    <size key="freeformSize" width="250" height="250"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wia-Lg-e1I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="CoinPicker" id="bCN-IW-6fH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Xj-Si-wtl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="835" y="82"/>
+            <point key="canvasLocation" x="758" y="-124"/>
         </scene>
     </scenes>
     <resources>

@@ -9,7 +9,7 @@ import Foundation
 import ReactiveSwift
 import ReactiveCocoa
 
-class WorkersInfoViewModel {
+class WorkersInfoViewModel: CoinPickable {
     
     // MARK: - Properties
     
@@ -23,14 +23,18 @@ class WorkersInfoViewModel {
     var pickedCoin = MutableProperty("BTC")
     var isEmptyTable = MutableProperty(true)
     var workers: MutableProperty<[WorkerInfo]> = MutableProperty<[WorkerInfo]>([])
-
     
-    
-    lazy var fetchWorkersAction: Action<Void, Void, Error> = {
+    lazy var fetchAction: Action<Void, Void, Error> = {
         return .init(execute: { [weak self] _ -> SignalProducer<Void, Error> in
             return self?.fetchWorkersInfo() ?? .empty
         })
     }()
+    
+    init() {
+        pickedCoin.signal.observeValues { [weak self] coin in
+            self?.fetchAction.apply().start()
+        }
+    }
     
     private func fetchWorkersInfo() -> SignalProducer<Void, Error> {
         return .init { [weak self] observer, lifetime in

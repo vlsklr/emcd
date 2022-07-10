@@ -13,7 +13,7 @@ class CoinPickerViewController: UITableViewController {
     let coins = [ "BTC",
                   "DOGE",
                   "LTC" ]
-    var viewModel: WorkersInfoViewModel?
+    var viewModel: CoinPickable?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +43,6 @@ class CoinPickerViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel?.pickedCoin.value = coins[indexPath.row]
-        viewModel?.fetchWorkersAction.apply().start()
         dismiss(animated: true)
     }
 

@@ -119,7 +119,7 @@
                 <outlet property="workerHashrate24hLabel" destination="gxV-jA-2nS" id="mVJ-16-tZL"/>
                 <outlet property="workerHashrateLabel" destination="Pk0-gq-dIx" id="LFU-rS-34D"/>
             </connections>
-            <point key="canvasLocation" x="263.768115942029" y="-241.07142857142856"/>
+            <point key="canvasLocation" x="246" y="-238"/>
         </tableViewCell>
     </objects>
 </document>

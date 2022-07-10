@@ -30,7 +30,8 @@ class WorkersInfoViewController: UIViewController {
         }()
     let viewModel = WorkersInfoViewModel()
     var coinPickerVC: CoinPickerViewController? {
-        guard let coinPickerVC = storyboard?.instantiateViewController(withIdentifier: "coinPickerVC") as? CoinPickerViewController else { return nil }
+        let storyboard = UIStoryboard(name: "CoinPicker", bundle: nil)
+        guard let coinPickerVC = storyboard.instantiateViewController(withIdentifier: "coinPickerVC") as? CoinPickerViewController else { return nil }
         
         coinPickerVC.modalPresentationStyle = .popover
         
@@ -48,7 +49,7 @@ class WorkersInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.fetchWorkersAction.apply().start()
+        viewModel.fetchAction.apply().start()
         workersTableView.dataSource = self
         workersTableView.register(cellType: WorkerCell.self)
         
@@ -61,10 +62,11 @@ class WorkersInfoViewController: UIViewController {
         hashrate24hLabel.reactive.text <~ viewModel.hashrate24h
         
         workersTableView.reactive.isHidden <~ viewModel.isEmptyTable
-        refreshControl.reactive.refresh = .init(viewModel.fetchWorkersAction)
+        refreshControl.reactive.refresh = .init(viewModel.fetchAction)
         workersTableView.refreshControl = refreshControl
-        viewModel.isEmptyTable.signal.observeValues { value in
-            self.workersTableView.reloadData()
+
+        viewModel.isEmptyTable.signal.observeValues { [weak self] _ in
+            self?.workersTableView.reloadData()
         }
 
     }
