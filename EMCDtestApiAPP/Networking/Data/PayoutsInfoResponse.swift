@@ -25,7 +25,7 @@ struct PayoutsInfo {
     
     //MARK: - Properties
     
-    let timestamp: Int
+    let timestamp: String
     let gmtTime: String
     let amount: Double
     let txid: String

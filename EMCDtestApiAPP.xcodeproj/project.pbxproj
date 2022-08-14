@@ -18,7 +18,7 @@
 		1F58E5E7287959F100D8E837 /* Payouts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F58E5E6287959F100D8E837 /* Payouts.storyboard */; };
 		1F58E5E928795D4100D8E837 /* CoinPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F58E5E828795D4100D8E837 /* CoinPicker.storyboard */; };
 		1F58E5FA287963D600D8E837 /* PayoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F58E5F9287963D600D8E837 /* PayoutCell.xib */; };
-		1F58E5FC2879655300D8E837 /* PayoutCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F58E5FB2879655300D8E837 /* PayoutCellViewController.swift */; };
+		1F58E5FC2879655300D8E837 /* PayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F58E5FB2879655300D8E837 /* PayoutCell.swift */; };
 		1F58E5FE2879656200D8E837 /* PayoutCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F58E5FD2879656200D8E837 /* PayoutCellViewModel.swift */; };
 		1F58E60028796C4E00D8E837 /* PayoutsInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F58E5FF28796C4E00D8E837 /* PayoutsInfoResponse.swift */; };
 		1F58E60328796FDC00D8E837 /* CoinPickable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F58E60228796FDC00D8E837 /* CoinPickable.swift */; };
@@ -74,7 +74,7 @@
 		1F58E5E6287959F100D8E837 /* Payouts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payouts.storyboard; sourceTree = "<group>"; };
 		1F58E5E828795D4100D8E837 /* CoinPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CoinPicker.storyboard; sourceTree = "<group>"; };
 		1F58E5F9287963D600D8E837 /* PayoutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PayoutCell.xib; sourceTree = "<group>"; };
-		1F58E5FB2879655300D8E837 /* PayoutCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayoutCellViewController.swift; sourceTree = "<group>"; };
+		1F58E5FB2879655300D8E837 /* PayoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayoutCell.swift; sourceTree = "<group>"; };
 		1F58E5FD2879656200D8E837 /* PayoutCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayoutCellViewModel.swift; sourceTree = "<group>"; };
 		1F58E5FF28796C4E00D8E837 /* PayoutsInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayoutsInfoResponse.swift; sourceTree = "<group>"; };
 		1F58E60228796FDC00D8E837 /* CoinPickable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinPickable.swift; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				1F58E5F9287963D600D8E837 /* PayoutCell.xib */,
-				1F58E5FB2879655300D8E837 /* PayoutCellViewController.swift */,
+				1F58E5FB2879655300D8E837 /* PayoutCell.swift */,
 				1F58E5FD2879656200D8E837 /* PayoutCellViewModel.swift */,
 			);
 			path = PayoutCell;
@@ -365,7 +365,7 @@
 				1F12FA12285EF8BA006074A4 /* WorkersInfoViewModel.swift in Sources */,
 				1F908628282FD1F800CD32F5 /* CommonInfoResponse.swift in Sources */,
 				1FD3C22F282A7F3A00076FC8 /* CommonInfoViewController.swift in Sources */,
-				1F58E5FC2879655300D8E837 /* PayoutCellViewController.swift in Sources */,
+				1F58E5FC2879655300D8E837 /* PayoutCell.swift in Sources */,
 				1FD3C22B282A7F3A00076FC8 /* AppDelegate.swift in Sources */,
 				1F5BF271282AA191004E0348 /* NetworkManager.swift in Sources */,
 				1F5BF26F282AA17C004E0348 /* CommonInfoViewModel.swift in Sources */,

@@ -11,7 +11,7 @@ import Reusable
 import ReactiveCocoa
 import ReactiveSwift
 
-class PayoutCellViewController: UITableViewCell {
+class PayoutCell: UITableViewCell {
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
@@ -32,5 +32,5 @@ class PayoutCellViewController: UITableViewCell {
     
 }
 
-extension PayoutCellViewController: NibReusable {
+extension PayoutCell: NibReusable {
 }

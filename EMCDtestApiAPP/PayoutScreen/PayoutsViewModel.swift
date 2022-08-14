@@ -27,7 +27,10 @@ final class PayoutsViewModel: CoinPickable {
     
     init() {
         pickedCoin.signal.observeValues { [weak self] coin in
-            self?.fetchAmounts().start()
+            guard let self = self else {
+                return
+            }
+            self.fetchAction.apply().start()
         }
     }
     
@@ -45,7 +48,7 @@ final class PayoutsViewModel: CoinPickable {
                     self.payouts = MutableProperty<[PayoutsInfo]>(payoutsInfo.payouts)
                     self.shouldUpdateTableView.value = self.payouts.value.isEmpty
                     return()
-                }.start()
+                }.start(observer)
         }
         
     }

@@ -54,8 +54,9 @@ final class PayoutsViewController: UIViewController {
         
         coinPickerButton.reactive.title <~ viewModel.pickedCoin
         payoutsTableVIew.dataSource = self
-        payoutsTableVIew.register(cellType: PayoutCellViewController.self)
-        
+        payoutsTableVIew.delegate = self
+        payoutsTableVIew.register(cellType: PayoutCell.self)
+        payoutsTableVIew.separatorStyle = .none
         payoutsTableVIew.reactive.isHidden <~ viewModel.shouldUpdateTableView
         refreshControl.reactive.refresh = .init(viewModel.fetchAction)
         payoutsTableVIew.refreshControl = refreshControl
@@ -81,7 +82,7 @@ extension PayoutsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: PayoutCellViewController = tableView.dequeueReusableCell(for: indexPath)
+        let cell: PayoutCell = tableView.dequeueReusableCell(for: indexPath)
         let payoutInfo = viewModel.payouts.value[indexPath.row]
         cell.viewModel = PayoutCellViewModel(date: payoutInfo.gmtTime, amount: "\(payoutInfo.amount)")
         return cell
