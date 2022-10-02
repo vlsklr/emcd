@@ -15,3 +15,4 @@
 * ReactiveSwift
 * Moya
 * Reusable
+* Управление зависимостями Carthage + SPM
