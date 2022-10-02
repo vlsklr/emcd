@@ -30,6 +30,9 @@ class CommonInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel.showAlert = showErrorAlert
+        
         userNameLabel.reactive.text <~ viewModel.userNameProperty
         btcBalanceLabel.reactive.text <~ viewModel.btcBalance
         btcTotalPaidLabel.reactive.text <~ viewModel.btcTotalPaid
@@ -51,6 +54,4 @@ class CommonInfoViewController: UIViewController {
         refreshControl.reactive.refresh = .init(viewModel.fetchAction)
         scrollView.refreshControl = refreshControl
     }
-
 }
-

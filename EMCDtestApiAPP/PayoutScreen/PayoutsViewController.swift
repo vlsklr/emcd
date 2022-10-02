@@ -50,6 +50,7 @@ final class PayoutsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.showAlert = showErrorAlert
         viewModel.fetchAction.apply().start()
         
         coinPickerButton.reactive.title <~ viewModel.pickedCoin
@@ -77,6 +78,7 @@ extension PayoutsViewController: UITableViewDelegate {
 }
 
 extension PayoutsViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.payouts.value.count
     }
@@ -87,7 +89,6 @@ extension PayoutsViewController: UITableViewDataSource {
         cell.viewModel = PayoutCellViewModel(date: payoutInfo.gmtTime, amount: "\(payoutInfo.amount)")
         return cell
     }
-    
     
 }
 
@@ -100,4 +101,3 @@ extension PayoutsViewController: UIPopoverPresentationControllerDelegate {
     }
     
 }
-

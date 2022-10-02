@@ -37,6 +37,10 @@
 		1F8DBC032868461D0013F8DE /* WorkerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8DBC022868461D0013F8DE /* WorkerCell.swift */; };
 		1F8DBC06286847DC0013F8DE /* Reusable in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8DBC05286847DC0013F8DE /* Reusable */; };
 		1F908628282FD1F800CD32F5 /* CommonInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F908627282FD1F800CD32F5 /* CommonInfoResponse.swift */; };
+		1F9CC89E28E960A6004D9DA2 /* AuthScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F9CC89D28E960A6004D9DA2 /* AuthScreen.storyboard */; };
+		1F9CC8A028E960B7004D9DA2 /* AuthScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CC89F28E960B7004D9DA2 /* AuthScreenViewController.swift */; };
+		1F9CC8A228E960C6004D9DA2 /* AuthScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CC8A128E960C6004D9DA2 /* AuthScreenViewModel.swift */; };
+		1F9CC8A528E987F5004D9DA2 /* ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9CC8A428E987F5004D9DA2 /* ErrorAlert.swift */; };
 		1FD3C22B282A7F3A00076FC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD3C22A282A7F3A00076FC8 /* AppDelegate.swift */; };
 		1FD3C22D282A7F3A00076FC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD3C22C282A7F3A00076FC8 /* SceneDelegate.swift */; };
 		1FD3C22F282A7F3A00076FC8 /* CommonInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD3C22E282A7F3A00076FC8 /* CommonInfoViewController.swift */; };
@@ -87,6 +91,10 @@
 		1F8DBC00286844910013F8DE /* WorkerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkerCell.xib; sourceTree = "<group>"; };
 		1F8DBC022868461D0013F8DE /* WorkerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerCell.swift; sourceTree = "<group>"; };
 		1F908627282FD1F800CD32F5 /* CommonInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonInfoResponse.swift; sourceTree = "<group>"; };
+		1F9CC89D28E960A6004D9DA2 /* AuthScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthScreen.storyboard; sourceTree = "<group>"; };
+		1F9CC89F28E960B7004D9DA2 /* AuthScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreenViewController.swift; sourceTree = "<group>"; };
+		1F9CC8A128E960C6004D9DA2 /* AuthScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreenViewModel.swift; sourceTree = "<group>"; };
+		1F9CC8A428E987F5004D9DA2 /* ErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlert.swift; sourceTree = "<group>"; };
 		1FD3C227282A7F3A00076FC8 /* EMCDtestApiAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMCDtestApiAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FD3C22A282A7F3A00076FC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FD3C22C282A7F3A00076FC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +157,7 @@
 		1F58E5F62879601D00D8E837 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				1F9CC8A328E987D5004D9DA2 /* Alerts */,
 				1F58E5F72879602B00D8E837 /* CoinPicker */,
 			);
 			path = UI;
@@ -211,6 +220,24 @@
 			path = WorkerCell;
 			sourceTree = "<group>";
 		};
+		1F9CC89C28E9608E004D9DA2 /* AuthScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1F9CC89D28E960A6004D9DA2 /* AuthScreen.storyboard */,
+				1F9CC89F28E960B7004D9DA2 /* AuthScreenViewController.swift */,
+				1F9CC8A128E960C6004D9DA2 /* AuthScreenViewModel.swift */,
+			);
+			path = AuthScreen;
+			sourceTree = "<group>";
+		};
+		1F9CC8A328E987D5004D9DA2 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				1F9CC8A428E987F5004D9DA2 /* ErrorAlert.swift */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
 		1FD3C21E282A7F3A00076FC8 = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +258,7 @@
 		1FD3C229282A7F3A00076FC8 /* EMCDtestApiAPP */ = {
 			isa = PBXGroup;
 			children = (
+				1F9CC89C28E9608E004D9DA2 /* AuthScreen */,
 				1F58E5F52879601200D8E837 /* Common */,
 				1F58E5E12879581600D8E837 /* PayoutScreen */,
 				1F12FA0A285EEA31006074A4 /* WorkersInfoScreen */,
@@ -338,6 +366,7 @@
 				1FD3C237282A7F3C00076FC8 /* LaunchScreen.storyboard in Resources */,
 				1FD3C234282A7F3C00076FC8 /* Assets.xcassets in Resources */,
 				1F58E5E928795D4100D8E837 /* CoinPicker.storyboard in Resources */,
+				1F9CC89E28E960A6004D9DA2 /* AuthScreen.storyboard in Resources */,
 				1F58E5E7287959F100D8E837 /* Payouts.storyboard in Resources */,
 				1F58E5FA287963D600D8E837 /* PayoutCell.xib in Resources */,
 				1F8DBC01286844910013F8DE /* WorkerCell.xib in Resources */,
@@ -355,6 +384,7 @@
 			files = (
 				1F58E5E32879584C00D8E837 /* PayoutsViewController.swift in Sources */,
 				1FE24D19284C9B6A00AA01E0 /* WorkerInfoResponse.swift in Sources */,
+				1F9CC8A028E960B7004D9DA2 /* AuthScreenViewController.swift in Sources */,
 				1F58E5E52879585D00D8E837 /* PayoutsViewModel.swift in Sources */,
 				1F12FA14285F111B006074A4 /* CoinPickerViewController.swift in Sources */,
 				1F8DBC032868461D0013F8DE /* WorkerCell.swift in Sources */,
@@ -363,9 +393,11 @@
 				1F58E5FE2879656200D8E837 /* PayoutCellViewModel.swift in Sources */,
 				1F12FA10285EF899006074A4 /* WorkersInfoViewController.swift in Sources */,
 				1F12FA12285EF8BA006074A4 /* WorkersInfoViewModel.swift in Sources */,
+				1F9CC8A228E960C6004D9DA2 /* AuthScreenViewModel.swift in Sources */,
 				1F908628282FD1F800CD32F5 /* CommonInfoResponse.swift in Sources */,
 				1FD3C22F282A7F3A00076FC8 /* CommonInfoViewController.swift in Sources */,
 				1F58E5FC2879655300D8E837 /* PayoutCell.swift in Sources */,
+				1F9CC8A528E987F5004D9DA2 /* ErrorAlert.swift in Sources */,
 				1FD3C22B282A7F3A00076FC8 /* AppDelegate.swift in Sources */,
 				1F5BF271282AA191004E0348 /* NetworkManager.swift in Sources */,
 				1F5BF26F282AA17C004E0348 /* CommonInfoViewModel.swift in Sources */,
@@ -525,7 +557,7 @@
 				INFOPLIST_FILE = EMCDtestApiAPP/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = AuthScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -554,7 +586,7 @@
 				INFOPLIST_FILE = EMCDtestApiAPP/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = AuthScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

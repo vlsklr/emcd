@@ -31,7 +31,9 @@ class CommonInfoViewModel {
         })
     }()
     
-    private let service = NetworkService()
+    var showAlert: (() -> Void)?
+    
+    private let service = NetworkService.shared
         
     func fetchData() -> SignalProducer<Void, Error> {
         return .init { [weak self] observer, lifetime in
@@ -42,6 +44,7 @@ class CommonInfoViewModel {
             
             lifetime += self.service.getCommonInfo()
                 .mapError { error -> Error in
+                    self.showAlert?()
                     return error as Error
                 }
                 .map { response -> Void in

@@ -13,7 +13,8 @@ class WorkersInfoViewModel: CoinPickable {
     
     // MARK: - Properties
     
-    private let service = NetworkService()
+    private let service = NetworkService.shared
+    var showAlert: (() -> Void)?
     var totalWorkers = MutableProperty("")
     var activeWorkers = MutableProperty("")
     var incativeWorkers = MutableProperty("")
@@ -45,6 +46,7 @@ class WorkersInfoViewModel: CoinPickable {
             
             lifetime += self.service.getInfoAboutWorker(coinName: self.pickedCoin.value.lowercased())
                 .mapError{ error -> Error in
+                    self.showAlert?()
                     return error
                 }.map{ response -> Void in
                     guard let coinInfo = try? JSONDecoder().decode(WorkerInfoResponse.self, from: response.data) else { return }

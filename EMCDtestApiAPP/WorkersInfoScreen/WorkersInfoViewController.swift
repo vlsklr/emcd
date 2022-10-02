@@ -49,6 +49,7 @@ class WorkersInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.showAlert = showErrorAlert
         viewModel.fetchAction.apply().start()
         workersTableView.dataSource = self
         workersTableView.register(cellType: WorkerCell.self)

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Auth Screen View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="AuthScreenViewController" customModule="EMCDtestApiAPP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your API key" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhU-jn-Dar">
+                                <rect key="frame" x="50" y="437.5" width="314" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDw-6h-MiK">
+                                <rect key="frame" x="177.5" y="542.5" width="59.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="API key" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xTL-lf-TrS">
+                                <rect key="frame" x="50" y="483.5" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xTL-lf-TrS" secondAttribute="trailing" constant="50" id="D1k-jn-yez"/>
+                            <constraint firstItem="cDw-6h-MiK" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="PFp-uZ-Cxe"/>
+                            <constraint firstItem="xhU-jn-Dar" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Q3l-3u-ufd"/>
+                            <constraint firstItem="xTL-lf-TrS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="TvR-SQ-ysJ"/>
+                            <constraint firstItem="cDw-6h-MiK" firstAttribute="top" secondItem="xTL-lf-TrS" secondAttribute="bottom" constant="25" id="UjS-F2-FYR"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xhU-jn-Dar" secondAttribute="trailing" constant="50" id="f1X-ig-EGL"/>
+                            <constraint firstItem="xTL-lf-TrS" firstAttribute="top" secondItem="xhU-jn-Dar" secondAttribute="bottom" constant="25" id="woS-Hd-Rr5"/>
+                            <constraint firstItem="xhU-jn-Dar" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="yEj-dz-f8m"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="apiKeyTextField" destination="xTL-lf-TrS" id="c3m-wB-6So"/>
+                        <outlet property="loginButton" destination="cDw-6h-MiK" id="vHk-Bl-RBl"/>
+                        <segue destination="4ZE-x6-Lrg" kind="presentation" identifier="showMainScreen" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="kc4-Ht-CwQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="93"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="bzH-mW-wYk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="4ZE-x6-Lrg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hxB-TX-IxY"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2qh-L8-wK8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844" y="77"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

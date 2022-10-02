@@ -9,9 +9,16 @@ import Foundation
 import ReactiveSwift
 import Moya
 import ReactiveMoya
+
 class NetworkService {
     
+    static let shared = NetworkService()
+    
+    var apiKey: String?
+    
     private let provider = MoyaProvider<NetworkManager>()
+    
+    private init() {}
     
     func getCommonInfo() -> SignalProducer<Response, MoyaError> {
         return provider.reactive.request(.getCommonInfo)

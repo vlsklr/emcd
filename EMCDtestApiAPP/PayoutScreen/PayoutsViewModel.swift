@@ -14,10 +14,11 @@ final class PayoutsViewModel: CoinPickable {
     
     //MARK: - Properties
     
-    let networkService = NetworkService()
+    let networkService = NetworkService.shared
     var pickedCoin = MutableProperty("BTC")
     var shouldUpdateTableView = MutableProperty(false)
     var payouts = MutableProperty<[PayoutsInfo]>([])
+    var showAlert: (() -> Void)?
     
     lazy var fetchAction: Action<Void, Void, Error> = {
         return .init(execute: { [weak self] _ -> SignalProducer<Void, Error> in
@@ -42,6 +43,7 @@ final class PayoutsViewModel: CoinPickable {
             }            
             lifetime += self.networkService.getInfoAboutPayouts(coin: self.pickedCoin.value.lowercased())
                 .mapError { error -> Error in
+                    self.showAlert?()
                     return error
                 }.map { response -> Void in
                     guard let payoutsInfo = try? JSONDecoder().decode(PayoutsInfoResponse.self, from: response.data) else { return }

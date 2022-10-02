@@ -17,7 +17,7 @@ enum NetworkManager {
 extension NetworkManager: TargetType {
     
     private var key: String {
-        return "dc9bb0a3-8689-45a5-9b77-d6da1226fc60"
+        return NetworkService.shared.apiKey ?? ""
     }
     
     var baseURL: URL {
